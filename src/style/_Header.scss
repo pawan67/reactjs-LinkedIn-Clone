@@ -1,0 +1,86 @@
+@import "Breakpoints";
+.header {
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.logo-searchbx {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.searchBx {
+  display: flex;
+  align-items: center;
+  background-color: #eef3f8;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-left: 8px;
+  transition: all 0.5s ease;
+  input {
+    transition: all 1s ease;
+
+    border: none;
+    background-color: #eef3f8;
+
+    &:focus {
+      @include breakpoint-down(small) {
+        width: 170px;
+      }
+      transition: 1s ease;
+      outline: none;
+      width: 250px;
+    }
+  }
+}
+.navIcons {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+  width: 450px;
+  justify-content: space-around;
+  display: flex;
+  text-transform: capitalize;
+  p {
+    margin: 0;
+    @include breakpoint-down(med) {
+      display: none;
+    }
+  }
+  .navlogos {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 100;
+    color: #585858;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.hire-message {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+  width: 110px;
+  font-size: 12px;
+  a {
+    color: #915907;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.messaging-mobile {
+  display: none;
+  width: 30px;
+  margin-right: 10px;
+  @include breakpoint-down(small) {
+    display: block;
+  }
+}

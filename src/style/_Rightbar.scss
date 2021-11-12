@@ -1,0 +1,95 @@
+@import "Breakpoints";
+.rightbar-news {
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 10px 0px;
+  .heading {
+    padding: 0 10px;
+    img {
+      padding: 5px;
+      border-radius: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: $lightest-gray;
+      }
+    }
+    display: flex;
+    color: $gray-color;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+.headline-news {
+  color: $gray-color;
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 2rem;
+    margin: 0;
+    margin-right: 5px;
+  }
+  p {
+    font-weight: 500;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+.headline-details {
+  display: flex;
+  font-size: 12px;
+  color: $light-gray;
+  p {
+    margin: 0 5px;
+  }
+}
+.headline-wrapper {
+  // margin: -10px 0;
+  padding: 0 10px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  &:hover {
+    background-color: $lightest-gray;
+  }
+}
+.footer {
+  ul {
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    padding-inline-start: 0px;
+    a {
+        margin: 0;
+        color: $light-gray;
+      li {
+          
+        font-size: 12px;
+        display: inline-block;
+        margin: 3px 5px;
+      }
+    }
+  }
+}
+.footer-logo{
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    color: $gray-color;
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+}
+
+.rightbar{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
